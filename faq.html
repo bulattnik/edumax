@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Часто задаваемые вопросы — Edumax</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Меню -->
+  <header class="main-header">
+    <div class="logo">Edumax</div>
+    </nav>
+  </header>
+
+  <!-- FAQ -->
+  <main class="faq-page">
+    <h1>Часто задаваемые вопросы</h1>
+
+    <div class="faq-item">
+      <button class="faq-question">Как записаться на курс?</button>
+      <div class="faq-answer">
+        Вы можете выбрать курс и преподавателя на странице оформления, указать свои контактные данные, и мы свяжемся с вами в ближайшее время.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Можно ли выбрать несколько предметов?</button>
+      <div class="faq-answer">
+        Да, вы можете выбрать несколько предметов в калькуляторе, и система посчитает итоговую стоимость.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Как восстановить пароль?</button>
+      <div class="faq-answer">
+        На странице входа нажмите на кнопку «Забыли пароль?». Вы сможете восстановить доступ через почту или телефон.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Как понять, какой преподаватель мне подойдёт?</button>
+      <div class="faq-answer">
+        На странице «Преподаватели» вы можете прочитать информацию о каждом специалисте и выбрать того, кто вам подходит по опыту и стилю преподавания.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Что делать, если остались вопросы?</button>
+      <div class="faq-answer">
+        Вы всегда можете написать нам через форму обратной связи на странице «Контакты» или в наш Telegram-канал.
+      </div>
+    </div>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <p>&copy; 2020–2025 Edumax. Все права защищены.</p>
+  </footer>
+
+  <!-- JS для раскрытия вопросов -->
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        btn.classList.toggle('active');
+        answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edumax — Вход и регистрация</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <button class="accessibility-btn" onclick="toggleFontSize()">A+</button>
+  <header>
+    <div class="logo"><a href="index.html"><img src="лого.jpeg" alt="Логотип" />Edumax</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="calc.html">Калькулятор</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="checkout.html">Оформление</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="sitemap.html">Карта сайта</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main class="auth-container">
+  <div class="auth-block login">
+    <h2>Вход</h2>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Пароль" required>
+    <button onclick="login()">Войти</button>
+    <a href="#" onclick="showRecoveryForm()">Забыли пароль?</a>
+
+    <div class="recovery-popup" id="recoveryPopup">
+  <div class="popup-content">
+    <h3>Восстановление пароля</h3>
+    <input type="email" placeholder="Email или номер телефона">
+    <button onclick="recoverPassword()">Восстановить</button>
+    <button onclick="closeRecoveryForm()">Отмена</button>
+  </div>
+</div>
+  </div>
+
+  <div class="auth-block register">
+    <h2>Регистрация</h2>
+    <input type="text" placeholder="Имя" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Телефон" required>
+    <form onsubmit="return validatePasswords(event)">
+  <input type="password" id="regPassword" placeholder="Придумайте пароль" required>
+  <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required>
+  <div id="passwordError" class="error-message"></div>
+  <button type="submit">Зарегистрироваться</button>
+</form>
+   
+  </div>
+</main>
+
+<div class="recovery-popup" id="recoveryPopup">
+  <div class="popup-content">
+    <h3>Восстановление пароля</h3>
+    <input type="email" placeholder="Email или номер телефона">
+    <button onclick="recoverPassword()">Восстановить</button>
+    <button onclick="closeRecoveryForm()">Отмена</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Edumax. Все права защищены.</p>
+  <div class="footer-nav">
+    <a href="index.html">Главная</a> |
+    <a href="catalog.html">Курсы</a> |
+    <a href="contacts.html">Контакты</a>
+  </div>
+  <div id="time"></div>
+  <div id="visits"></div>
+</footer>
+<!-- Модальное окно восстановления пароля -->
+<div class="modal" id="recoveryModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeRecoveryForm()">&times;</span>
+    <h3>Восстановление пароля</h3>
+    <input type="text" id="recoveryInput" placeholder="Введите email или телефон">
+    <button onclick="recoverPassword()">Восстановить</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Каталог онлайн-курсов подготовки к ОГЭ и ЕГЭ от Edumax" />
+  <meta name="keywords" content="курсы, ЕГЭ, ОГЭ, онлайн, обучение, Edumax" />
+  <title>Преподаватели | Edumax</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <button class="accessibility-btn" onclick="toggleFontSize()">A+</button>
+  <header>
+    <div class="logo"><a href="index.html"><img src="лого.jpeg" alt="Логотип" />Edumax</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="calc.html">Калькулятор</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="checkout.html">Оформление</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="sitemap.html">Карта сайта</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="teachers-section">
+    <h1>Наши преподаватели</h1>
+
+    <div class="filter">
+      <label for="subject-filter">Фильтр по предмету:</label>
+      <select id="subject-filter">
+        <option value="all">Все предметы</option>
+        <option value="math">Математика</option>
+        <option value="russian">Русский язык</option>
+        <option value="social">Обществознание</option>
+        <option value="history">История</option>
+        <option value="english">Английский язык</option>
+        <option value="bio">Биология</option>
+        <option value="inf">Информатика</option>
+      </select>
+    </div>
+
+    <div class="teachers-container">
+      <!-- МАТЕМАТИКА -->
+      <div class="teacher-card subject-math">
+        <div class="photo-placeholder"> <img src="препод 1.jpeg" alt="фото"></div>
+        <h3>Анна Иванова</h3>
+        <p>Математика — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Анна Иванова, стаж 10 лет. Победитель Всероссийского конкурса учителей математики.')">Подробнее</button>
+      </div>
+      <div class="teacher-card subject-math">
+        <div class="photo-placeholder"><img src="препод 2.jpeg" alt="фото"></div>
+        <h3>Виктор Соколов</h3>
+        <p>Математика — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Виктор Соколов, стаж 8 лет. Руководитель школьной олимпиады по математике.')">Подробнее</button>
+      </div>
+
+      <!-- РУССКИЙ -->
+      <div class="teacher-card subject-russian">
+        <div class="photo-placeholder"><img src="препод 3.jpeg" alt="фото"></div>
+        <h3>Елена Петрова</h3>
+        <p>Русский язык — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Елена Петрова, стаж 6 лет. Автор пособий по ЕГЭ.')">Подробнее</button>
+      </div>
+      <div class="teacher-card subject-russian">
+        <div class="photo-placeholder"><img src="препод 4.jpeg" alt="фото"></div>
+        <h3>Мария Смирнова</h3>
+        <p>Русский язык — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Мария Смирнова, стаж 9 лет. Эксперт ЕГЭ по русскому языку.')">Подробнее</button>
+      </div>
+
+      <!-- ОБЩЕСТВОЗНАНИЕ -->
+      <div class="teacher-card subject-social">
+        <div class="photo-placeholder"><img src="препод 5.jpeg" alt="фото"></div>
+        <h3>Игорь Кузнецов</h3>
+        <p>Обществознание — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Игорь Кузнецов, стаж 13 лет. Автор курсов по праву и экономике.')">Подробнее</button>
+      </div>
+      <div class="teacher-card subject-social">
+        <div class="photo-placeholder"><img src="препод 6.jpeg" alt="фото"></div>
+        <h3>Татьяна Громова</h3>
+        <p>Обществознание — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Татьяна Громова, стаж 7 лет. Победитель конкурса «Лучший преподаватель СПО».')">Подробнее</button>
+      </div>
+
+      <!-- ИСТОРИЯ -->
+      <div class="teacher-card subject-history">
+        <div class="photo-placeholder"><img src="препод 7.jpeg" alt="фото"></div>
+        <h3>Александр Михайлов</h3>
+        <p>История — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Александр Михайлов, стаж 16 лет. Публикации в исторических журналах.')">Подробнее</button>
+      </div>
+      <div class="teacher-card subject-history">
+        <div class="photo-placeholder"><img src="препод 81.jpeg" alt="фото"></div>
+        <h3>Ольга Шевченко</h3>
+        <p>История — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Ольга Шевченко, стаж 10 лет. Ведёт курс «История России в деталях».')">Подробнее</button>
+      </div>
+
+      <!-- АНГЛИЙСКИЙ -->
+      <div class="teacher-card subject-english">
+        <div class="photo-placeholder"><img src="препод 91.jpeg" alt="фото"></div>
+        <h3>Дмитрий Захаров</h3>
+        <p>Английский язык — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Дмитрий Захаров, стаж 10 лет. CELTA-сертификат.')">Подробнее</button>
+      </div>
+      <div class="teacher-card subject-english">
+        <div class="photo-placeholder"><img src="препод 10.jpeg" alt="фото"></div>
+        <h3>Светлана Алексеева</h3>
+        <p>Английский язык — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Светлана Алексеева, стаж 5 лет. Стажировки в Великобритании.')">Подробнее</button>
+      </div>
+
+      <!-- БИОЛОГИЯ -->
+      <div class="teacher-card subject-bio">
+        <div class="photo-placeholder"><img src="препод 11.jpeg" alt="фото"></div>
+        <h3>Наталья Белова</h3>
+        <p>Биология — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Наталья Белова, стаж 11 лет. Руководитель секции школьной биологии.')">Подробнее</button>
+      </div>
+      <div class="teacher-card subject-bio">
+        <div class="photo-placeholder"><img src="препод 12.jpeg" alt="фото"></div>
+        <h3>Галина Орлова</h3>
+        <p>Биология — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Галина Орлова, стаж 8 лет. Победитель конкурса методических разработок.')">Подробнее</button>
+      </div>
+
+      <!-- ИНФОРМАТИКА -->
+      <div class="teacher-card subject-inf">
+        <div class="photo-placeholder"><img src="препод 131.jpeg" alt="фото"></div>
+        <h3>Павел Романов</h3>
+        <p>Информатика — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Павел Романов, стаж 10 лет. Призёр Всероссийского хакатона.')">Подробнее</button>
+      </div>
+      <div class="teacher-card subject-inf">
+        <div class="photo-placeholder"><img src="препод 14.jpeg" alt="фото"></div>
+        <h3>Ирина Литвинова</h3>
+        <p>Информатика — ОГЭ и ЕГЭ</p>
+        <button onclick="showDetails('Ирина Литвинова, стаж 6 лет. Курсы Python и алгоритмики.')">Подробнее</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="details-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Главная</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="sitemap.html">Карта сайта</a>
+    </div>
+    <div class="footer-contact">
+      <p>&copy; 2025 Edumax. Все права защищены.</p>
+      <p>Тел: +7 000 000 00 00 | Email: info@edumax.ru</p>
+    </div>
+  </footer>
+  <script src="scripts.js"></script>
+  <script>
+    document.getElementById('subject-filter').addEventListener('change', function () {
+  const selected = this.value;
+  document.querySelectorAll('.teacher-card').forEach(card => {
+    if (selected === 'all' || card.classList.contains('subject-' + selected)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+    });
+  });
+
+    document.querySelector('.close-modal').addEventListener('click', () => {
+      document.getElementById('details-modal').style.display = 'none';
+    });
+    
+  </script>
+</body>
+</html>

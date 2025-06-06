@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Отзывы | Edumax</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+   <button class="accessibility-btn" onclick="toggleFontSize()">A+</button>
+  <header>
+    <div class="logo"><a href="index.html"><img src="лого.jpeg" alt="Логотип" />Edumax</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="calc.html">Калькулятор</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="checkout.html">Оформление</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="sitemap.html">Карта сайта</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="reviews-section">
+    <h1 class="animated-title">Отзывы</h1>
+
+    <div id="reviews-container" class="fade-in">
+      <div class="review">
+        <p>Очень понравились занятия, особенно по математике! 👍</p>
+        <span>— Анна</span>
+      </div>
+      <div class="review">
+        <p>Подготовился к ЕГЭ по русскому на 90+, спасибо команде!</p>
+        <span>— Михаил</span>
+      </div>
+    </div>
+     <div class="review">
+        <p>Дочь в восторге. Преподаватели все подробно объясняют и проблем с пониманием нет!</p>
+        <span>— Ольга</span>
+      </div>
+    </div>
+
+    <div id="add-review-block" class="fade-in">
+      <h2>Оставить отзыв</h2>
+      <textarea id="reviewText" placeholder="Ваш отзыв..."></textarea>
+      <button onclick="submitReview()">Отправить</button>
+      <div id="reviewMessage" class="info-message"></div>
+    </div>
+  </main>
+
+<footer>
+  <p>© 2025 Edumax. Все права защищены.</p>
+  <div class="footer-nav">
+    <a href="index.html">Главная</a> |
+    <a href="catalog.html">Курсы</a> |
+    <a href="contacts.html">Контакты</a>
+  </div>
+  <div id="time"></div>
+  <div id="visits"></div>
+</footer>
+</body>
+</html>

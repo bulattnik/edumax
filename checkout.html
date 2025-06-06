@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Оформление заявки — Edumax</title>
+  <link rel="stylesheet" href="style.css" />
+  </head>
+<body>
+ <button class="accessibility-btn" onclick="toggleFontSize()">A+</button>
+  <header>
+    <div class="logo"><a href="index.html"><img src="лого.jpeg" alt="Логотип" />Edumax</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="calc.html">Калькулятор</a></li>
+        <li><a href="login.html">Вход</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="checkout.html">Оформление</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="sitemap.html">Карта сайта</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Оформление заявки</h1>
+
+    <form id="requestForm" class="animated-form">
+      <label for="subject">Выберите предмет:</label>
+      <select id="subject" required>
+        <option value="">--Выберите предмет--</option>
+        <option>Математика</option>
+        <option>Русский язык</option>
+        <option>Обществознание</option>
+        <option>История</option>
+        <option>Английский язык</option>
+        <option>Биология</option>
+        <option>Информатика</option>
+      </select>
+
+      <label for="teacher">Выберите преподавателя:</label>
+      <select id="teacher" required>
+        <option value="">--Выберите преподавателя--</option>
+        <option>Анна Иванова (Математика)</option>
+        <option>Виктор Соколов(Математика)</option>
+        <option>Елена Петрова(Русский язык)</option>
+        <option>Мария Смирнова(Руский язык)</option>
+        <option>Игорь Кузнецов(Обществознание)</option>
+        <option>Татьяна Громова(Обществознание)</option>
+        <option>Александр Михайлов(История)</option>
+        <option>Ольга Шевченко(ИСтория)</option>
+        <option>Дмитрий Захаров(Английский)</option>
+        <option>Светлана Алексеевна(Английский)</option>
+        <option>Наталья Белова(Биология)</option>
+        <option>Галина Орлова(Биология)</option>
+        <option>Павел Романов(Информатика)</option>
+        <option>Ирина Литвинова(Информатика)</option>
+      </select>
+
+      <label for="contact">Ваш телефон или email:</label>
+      <input type="text" id="contact" placeholder="example@mail.com или +7..." required/>
+
+      <button type="submit">Оформить заявку</button>
+    </form>
+
+    <div id="successModal" class="modal hidden">
+      <div class="modal-content">
+        <p>Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+        <button onclick="closeModal()">Закрыть</button>
+      </div>
+    </div>
+  <footer>
+  <p>© 2025 Edumax. Все права защищены.</p>
+  <div class="footer-nav">
+    <a href="index.html">Главная</a> |
+    <a href="catalog.html">Курсы</a> |
+    <a href="contacts.html">Контакты</a>
+  </div>
+</footer>
+
+  <script src="scripts.js"></script>
+ <script>
+  document.getElementById('requestForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('successModal').classList.remove('hidden');
+});
+
+function closeModal() {
+  document.getElementById('successModal').classList.add('hidden');
+}
+
+// Счётчик посещений
+let visits = localStorage.getItem('visits') || 0;
+visits++;
+localStorage.setItem('visits', visits);
+document.getElementById('visits').innerText = visits;
+
+// Текущее время
+function updateTime() {
+  const now = new Date();
+  document.getElementById('time').textContent = now.toLocaleTimeString();
+}
+setInterval(updateTime, 1000);
+updateTime();
+
+// Слабовидящий режим
+let enlarged = false;
+function toggleFontSize() {
+  // Меняем шрифт для лучшего восприятия
+  document.body.style.fontSize = enlarged ? "16px" : "20px";
+  enlarged = !enlarged;
+}
+
+// Обработчик кнопки для слабовидящих
+document.getElementById('accessibilityButton').addEventListener('click', toggleFontSize);
+
+ </script>
+ </body>
+</html>
